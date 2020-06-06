@@ -11,7 +11,7 @@ async function getdata(){
     var col = [];
         for (var i = 0; i < data.statewise.length; i++) {
             for (var key in data.statewise[i]) {
-                 if (key == "active"||key == "confirmed"||key == "deaths"||key == "recovered"||key =="state") {
+                 if (key == "active"||key == "confirmed"||key == "deaths"||key == "recovered") {
                         if (col.indexOf(key) === -1) {
                         col.push(key);
                         console.log(key);
@@ -19,6 +19,8 @@ async function getdata(){
                 }
             }
         }
+        var state = ["state"];
+        col = state.concat(col);
         console.log(col);
         // Create a table.
         var table = document.createElement("table");
