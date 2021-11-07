@@ -1,4 +1,4 @@
-const api_url = 'https://api.covid19india.org/data.json';
+const api_url = 'https://data.covid19india.org/data.json';
 async function getdata(){
     const response = await fetch(api_url);
     const data = await response.json();
